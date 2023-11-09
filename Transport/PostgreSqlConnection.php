@@ -43,11 +43,6 @@ final class PostgreSqlConnection extends Connection
         throw new \BadMethodCallException('Cannot unserialize '.__CLASS__);
     }
 
-    public function __destruct()
-    {
-        $this->unlisten();
-    }
-
     public function reset(): void
     {
         parent::reset();
